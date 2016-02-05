@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{B2B58FB2-4462-6B0C-A872-40DD957E5FE0}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_7_0;UNITY_4_7;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_IL2CPP;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;UNITY5_SCRIPTING_IN_UNITY4;ENABLE_CACHING;ENABLE_CLOTH;UNITY_ANDROID_API;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_MONO;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;VUFORIA_ANDROID_SETTINGS</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\CanvasInstantiator.cs" />
+     <Compile Include="Assets\EnableModel.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\BackgroundPlaneBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\CloudRecoBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\CylinderTargetBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\DatabaseLoadBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\DefaultInitializationErrorHandler.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\DefaultSmartTerrainEventHandler.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\DefaultTrackableEventHandler.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\GLErrorHandler.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\HideExcessAreaBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\ImageTargetBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\Internal\AndroidUnityPlayer.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\Internal\ComponentFactoryStarterBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\Internal\IOSUnityPlayer.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\Internal\VuforiaBehaviourComponentFactory.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\KeepAliveBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\MarkerBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\MaskOutBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\MultiTargetBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\ObjectTargetBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\PropBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\ReconstructionBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\ReconstructionFromTargetBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\SmartTerrainTrackerBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\SurfaceBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\TextRecoBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\TurnOffBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\TurnOffWordBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\UserDefinedTargetBuildingBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\Utilities\VRIntegrationHelper.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\VideoBackgroundBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\VideoTextureRenderer.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\VirtualButtonBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\VuforiaBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\WebCamBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\WireframeBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\WireframeTrackableEventHandler.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\WordBehaviour.cs" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Multiply Culled.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Miscellaneous Shaders\Mobile Background.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Vertex Colored Shaders\Mobile Transparent Vertex Color.shader" />
+     <None Include="Assets\link.xml" />
+     <None Include="Assets\Vuforia\Shaders\VertexLitWithZ.shader" />
+     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+     <None Include="Assets\readme_SDK.txt" />
+     <None Include="Assets\license_3rdpartynotice.txt" />
+     <None Include="Assets\Vuforia\Shaders\RenderVideoBackground.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Miscellaneous Shaders\Mobile Detail.shader" />
+     <None Include="Assets\StreamingAssets\QCAR\bottle.xml" />
+     <None Include="Assets\Vuforia\Shaders\VideoBackground.shader" />
+     <None Include="Assets\Vuforia\Editor\WebcamProfiles\profiles.xml" />
+     <None Include="Assets\Vuforia\Shaders\DepthMask.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap Reflective.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Particles Additive Culled.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Vertex Colored Shaders\Mobile Vertex Colored.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap Only.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap AlphaTest.shader" />
+     <None Include="Assets\Vuforia\Shaders\ClippingMask.shader" />
+     <None Include="Assets\Vuforia\Shaders\BrightTexture.shader" />
+     <None Include="Assets\Vuforia\Shaders\Text3D.shader" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.7.0/Standalone/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Qualcomm.Vuforia.UnityExtensions">
+ <HintPath>C:/Users/Andy/Documents/New Unity Project/Assets/Vuforia/Scripts/Internal/Qualcomm.Vuforia.UnityExtensions.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

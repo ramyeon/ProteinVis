@@ -8,9 +8,9 @@ public class EnableModel : MonoBehaviour//, IPointerClickHandler
 	public GameObject model;
     public Button start;
     public Button exit;
-	public bool isAlive;
-    public Vector3 initKeyPos;
-    public Vector3 initHostPos;
+	private bool isAlive;
+    private Vector3 initKeyPos;
+    private Vector3 initHostPos;
     public GameObject parent;
 
     public void Start(){
@@ -46,9 +46,30 @@ public class EnableModel : MonoBehaviour//, IPointerClickHandler
         else {
             //return initial state of protein icons
             transform.position = initKeyPos;
-            model.transform.position = initHostPos;
+            //model.transform.position = initHostPos;
+            model.SetActive(isAlive);
+
+            //reset tag
             gameObject.tag = "Untagged";
             parent.tag = "Untagged";
         }
+    }
+
+    public void terminateAnimation() {
+        isAlive = false;
+
+        //reset position
+        transform.position = initKeyPos;
+        //turn off parent model
+        model.SetActive(isAlive);
+
+        //reset tag
+        gameObject.tag = "Untagged";
+        parent.tag = "Untagged";
+
+        //reset button
+        start.gameObject.SetActive(isAlive);
+        exit.gameObject.SetActive(isAlive);
+        Debug.Log("Exit button: reset everything.");
     }
 } 

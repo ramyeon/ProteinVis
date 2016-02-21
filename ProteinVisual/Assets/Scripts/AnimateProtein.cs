@@ -40,11 +40,14 @@ public class AnimateProtein : MonoBehaviour {
     }
 	
 	private void initializeAnimation () {
+        Debug.Log("Animation initialized.");
         key = transform.GetChild(0);
         host = transform.GetChild(1);
 
-        KEYINITPOS = key.position;
-        HOSTINITPOS = host.position;
+        KEYINITPOS = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 4.0f, Screen.height / 2.0f, 300));
+        HOSTINITPOS = Camera.main.ScreenToWorldPoint(new Vector3(3.0f * Screen.width / 4.0f, 3.0f * Screen.height / 4.0f, 150));
+        key.transform.position = KEYINITPOS;
+        host.transform.position = HOSTINITPOS;
         animationInitialized = true;
 	}
 
@@ -60,9 +63,6 @@ public class AnimateProtein : MonoBehaviour {
         if (animeActive)
         {
             Debug.Log("Animation is turned on.");
-        }
-        else {
-            Debug.Log("Animation is turned off.");
         }
     }
 }

@@ -14,28 +14,39 @@ public class ButtonScripts : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+    }
+
+    /* Start button: start animation mode, show
+    button interface */
+    public void onClickStart()
+    {
+        //assign active protein to UI interface
         activeKey = GameObject.FindWithTag("activeKey");
         activeProtein = GameObject.FindWithTag("activeProtein");
-        if(activeKey != null && activeProtein != null)
+        //make sure models exist
+        if (activeKey != null && activeProtein != null)
         {
             animateProteinScript = activeProtein.GetComponent<AnimateProtein>();
             enableModelScript = activeKey.GetComponent<EnableModel>();
         }
-    }
-
-    public void onClickStart()
-    {
-        if (activeProtein != null) {
-            Debug.Log("Active protein is not null.");
+        else
+        {
+            Debug.LogError("None of the protein models are active.");
         }
-        animateProteinScript.setActive();
+
+        //Set animation active
+        if (animateProteinScript)
+        {
+            animateProteinScript.setActive();
+        }
     }
 
-    public void exitAnimation()
+    /* Exit button: exit out of animation mode, no 
+    button interface */
+    public void onClickExit()
     {
         //return initial state of protein icons
-        enableModelScript.transform.position = enableModelScript.initKeyPos;
-        enableModelScript.isAlive = false;
+        enableModelScript.terminateAnimation();
         animateProteinScript.setActiveFalse();
         activeKey.gameObject.tag = "Untagged";
         activeProtein.gameObject.tag = "Untagged";

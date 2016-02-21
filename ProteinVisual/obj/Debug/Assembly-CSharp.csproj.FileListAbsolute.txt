@@ -1,0 +1,14 @@
+C:\Users\Sylvia\Documents\GitHub\ProteinVis\ProteinVisual\Temp\bin\Debug\Assembly-CSharp.dll
+C:\Users\Sylvia\Documents\GitHub\ProteinVis\ProteinVisual\Temp\bin\Debug\Assembly-CSharp.pdb
+C:\Users\Sylvia\Documents\GitHub\ProteinVis\ProteinVisual\Temp\bin\Debug\Qualcomm.Vuforia.UnityExtensions.dll
+C:\Users\Sylvia\Documents\GitHub\ProteinVis\ProteinVisual\Temp\bin\Debug\UnityEditor.dll
+C:\Users\Sylvia\Documents\GitHub\ProteinVis\ProteinVisual\Temp\bin\Debug\UnityEngine.dll
+C:\Users\Sylvia\Documents\GitHub\ProteinVis\ProteinVisual\Temp\bin\Debug\UnityEngine.UI.dll
+C:\Users\Sylvia\Documents\GitHub\ProteinVis\ProteinVisual\Temp\bin\Debug\Mono.Cecil.dll
+C:\Users\Sylvia\Documents\GitHub\ProteinVis\ProteinVisual\Temp\bin\Debug\nunit.framework.dll
+C:\Users\Sylvia\Documents\GitHub\ProteinVis\ProteinVisual\Temp\bin\Debug\Unity.DataContract.dll
+C:\Users\Sylvia\Documents\GitHub\ProteinVis\ProteinVisual\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Users\Sylvia\Documents\GitHub\ProteinVis\ProteinVisual\Temp\bin\Debug\Qualcomm.Vuforia.UnityExtensions.xml
+C:\Users\Sylvia\Documents\GitHub\ProteinVis\ProteinVisual\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+C:\Users\Sylvia\Documents\GitHub\ProteinVis\ProteinVisual\obj\Debug\Assembly-CSharp.dll
+C:\Users\Sylvia\Documents\GitHub\ProteinVis\ProteinVisual\obj\Debug\Assembly-CSharp.pdb

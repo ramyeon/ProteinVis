@@ -1,0 +1,5 @@
+parent
+key AROC1.fbx
+position -2.481 83.747 -18.44
+rotation 0 0 0
+scale 150 150 150

@@ -37,8 +37,8 @@ public class EnableModel : MonoBehaviour//, IPointerClickHandler
         if (isAlive)
         {
             //initiate proteins to prep animation
-            transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 4.0f, Screen.height / 2.0f, 300));
-            model.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(3.0f * Screen.width / 4.0f, 3.0f * Screen.height / 4.0f, 150));
+            transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 4.0f, Screen.height / 2.0f, 500));
+            model.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(3.0f * Screen.width / 4.0f, 3.0f * Screen.height / 4.0f, 400));
             gameObject.tag = "activeKey";
             parent.tag = "activeProtein";
             Debug.Log("I am alive");

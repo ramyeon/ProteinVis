@@ -1,6 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\AnimateProtein.cs">
+    <Files>
+      <File FileName="Assets\Scripts\AnimateProtein.cs" Line="77" Column="38" />
+      <File FileName="Assets\Scripts\ButtonScripts.cs" Line="56" Column="1" />
+      <File FileName="Assets\Scripts\txtParser.cs" Line="39" Column="1" />
+      <File FileName="Assets\Scripts\ProteinSpin.cs" Line="46" Column="3" />
+      <File FileName="Assets\Scripts\EnableModel.cs" Line="75" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

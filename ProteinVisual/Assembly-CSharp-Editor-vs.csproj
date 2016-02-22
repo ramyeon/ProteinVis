@@ -71,6 +71,7 @@
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap AlphaTest.shader" />
      <None Include="Assets\Vuforia\Shaders\ClippingMask.shader" />
      <None Include="Assets\Vuforia\Shaders\BrightTexture.shader" />
+     <None Include="Assets\Scripts\proteinList.txt" />
      <None Include="Assets\Vuforia\Shaders\Text3D.shader" />
  <Reference Include="Assembly-UnityScript">
  <HintPath>C:/Users/Sylvia/Documents/GitHub/ProteinVis/ProteinVisual/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>

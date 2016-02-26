@@ -19,6 +19,9 @@ public class AnimateProtein : MonoBehaviour {
 	private Vector3[] initials;
 	private float speedUp;
 	private float speedLeft;
+	private int bounces;
+	private int coord;
+	private float normMag;
 
 	// Use this for initialization
 	void Start () {
@@ -43,10 +46,10 @@ public class AnimateProtein : MonoBehaviour {
     private void translateKey() {
 		if (counter [currPoint] < 1.0f) {
 			key.position = Vector3.Lerp (initials[currPoint], route [currPoint], counter [currPoint]);
-			counter [currPoint] += Time.deltaTime * (float).5;
+			counter [currPoint] += Time.deltaTime * normMag/(Vector3.Distance(route[currPoint],initials[currPoint])*2.0f);
 			randRotate();
 		} else {
-			if(currPoint < 3)
+			if(currPoint < bounces - 1)
 			currPoint++;
 		}
     }
@@ -60,7 +63,7 @@ public class AnimateProtein : MonoBehaviour {
 		key.Rotate (Vector3.left, speedLeft * Time.deltaTime);
 	}
 
-	private void initializeAnimation () {
+	/*private void initializeAnimation () {
         Debug.Log("Animation initialized.");
         key = transform.GetChild(0);
         host = transform.GetChild(1);
@@ -87,6 +90,31 @@ public class AnimateProtein : MonoBehaviour {
 		}
 
         animationInitialized = true;
+	}*/
+
+	private void initializeAnimation () {
+		Debug.Log("Animation initialized.");
+		key = transform.GetChild(0);
+		host = transform.GetChild(1);
+		
+		KEYINITPOS = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 4.0f, Screen.height / 2.0f, 500));
+		HOSTINITPOS = Camera.main.ScreenToWorldPoint(new Vector3(3.0f * Screen.width / 4.0f, 3.0f * Screen.height / 4.0f, 400));
+		key.transform.position = KEYINITPOS;
+		host.transform.position = HOSTINITPOS;
+		
+		for (int i = 0; i < bounces-1; i++) {
+			coord = Random.Range (0,3);
+			route[i] = HOSTINITPOS;
+			route[i][coord] = route[i][coord] * Random.Range (-2.0f,2.0f);
+		}
+		route [bounces - 1] = HOSTINITPOS;
+		initials [0] = KEYINITPOS;
+		normMag = Vector3.Distance(HOSTINITPOS,KEYINITPOS);
+		for (int i = 1; i < bounces; i++) {
+			initials[i] = route[i-1];
+		}
+		
+		animationInitialized = true;
 	}
 
     public void setActiveFalse() {
@@ -94,11 +122,15 @@ public class AnimateProtein : MonoBehaviour {
     }
 	
 	public void setActive () {
+		bounces = Random.Range (3, 7);
 		animeActive = true;
         animationInitialized = false;
-		for(int i = 0; i < 4; i++){
+		counter = new float[bounces];
+		for(int i = 0; i < bounces; i++){
 			counter[i] = 0.0f;
 		}
+		initials = new Vector3[bounces];
+		route = new Vector3[bounces];
 		currPoint = 0;
         if (animeActive)
         {

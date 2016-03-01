@@ -7,13 +7,18 @@ public class ButtonScripts : MonoBehaviour {
     private AnimateProtein animateProteinScript;
     private GameObject activeKey;
     private GameObject activeProtein;
+    private ClearOtherModels clearOtherModelScript;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        if (clearOtherModelScript == null)
+        {
+            clearOtherModelScript = FindObjectOfType<ClearOtherModels>();
+        }
     }
 
     /* Start button: start animation mode, show
@@ -38,6 +43,7 @@ public class ButtonScripts : MonoBehaviour {
             animateProteinScript.setActiveFalse();
             enableModelScript.terminateAnimation();
             Debug.Log("Exiting");
+            clearOtherModelScript.SetActive(true);
         }
     }
 

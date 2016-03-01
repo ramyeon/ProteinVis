@@ -104,8 +104,8 @@ public class AnimateProtein : MonoBehaviour {
         key = transform.GetChild(0);
         host = transform.GetChild(1);
         Debug.Log("Animation initialized.");
-		KEYINITPOS = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 5.0f, Screen.height / 2.0f, 200));
-		HOSTINITPOS = Camera.main.ScreenToWorldPoint(new Vector3(3.0f * Screen.width / 4.0f, 3.0f * Screen.height / 4.0f, 300));
+		KEYINITPOS = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f, Screen.height / 4.0f, 200));
+		HOSTINITPOS = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f, 3.0f * Screen.height / 4.0f, 300));
 		key.transform.position = KEYINITPOS;
 		host.transform.position = HOSTINITPOS;
 		

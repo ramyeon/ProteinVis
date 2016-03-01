@@ -11,6 +11,7 @@ public class EnableModel : MonoBehaviour//, IPointerClickHandler
 	private bool isAlive;
     private bool translateToInitActive;
     private bool translateResetActive;
+    private ClearOtherModels clearOtherModelScript;
     private float count = 0.0f;
     private Vector3 initKeyPos;
     private Vector3 currPos;
@@ -27,7 +28,7 @@ public class EnableModel : MonoBehaviour//, IPointerClickHandler
     }
 
     public void Update(){
-		model.SetActive(isAlive);
+        model.SetActive(isAlive);
 
         if (translateToInitActive)
         {
@@ -35,6 +36,10 @@ public class EnableModel : MonoBehaviour//, IPointerClickHandler
         }
         if (translateResetActive) {
             translateReset();
+        }
+
+        if (clearOtherModelScript == null) {
+            clearOtherModelScript = FindObjectOfType<ClearOtherModels> ();
         }
     }
 
@@ -45,19 +50,20 @@ public class EnableModel : MonoBehaviour//, IPointerClickHandler
         exit.gameObject.SetActive(isAlive);
 
         //initiate proteins to prep animation
-        model.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(3.0f * Screen.width / 4.0f, 3.0f * Screen.height / 4.0f, 300));
+        model.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f, 3.0f * Screen.height / 4.0f, 300));
         gameObject.tag = "activeKey";
         parent.tag = "activeProtein";
         Debug.Log("I am alive");
 
         count = 0.0f;
         translateToInitActive = true;
+        clearOtherModelScript.SetActive(false);
     }
 
     private void translateToInit() {
         if (count < 1.0f)
         {
-            transform.position = Vector3.Lerp(initKeyPos, Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 5.0f, Screen.height / 2.0f, 200)), count);
+            transform.position = Vector3.Lerp(initKeyPos, Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f, Screen.height / 4.0f, 200)), count);
             count += 0.1f;
         }
         else {

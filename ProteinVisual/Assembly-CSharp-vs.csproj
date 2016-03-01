@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Animation\AnimateProtein.cs" />
+     <Compile Include="Assets\Scripts\Animation\ClearOtherModels.cs" />
      <Compile Include="Assets\Scripts\Animation\EnableModel.cs" />
      <Compile Include="Assets\Scripts\Canvas\ButtonScripts.cs" />
      <Compile Include="Assets\Scripts\Canvas\CanvasInstantiator.cs" />

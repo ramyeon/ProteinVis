@@ -22,6 +22,7 @@ public class AnimateProtein : MonoBehaviour {
 	private int bounces;
 	private int coord;
 	private float normMag;
+    private Vector3 defaultScale;
 
 	// Use this for initialization
 	void Start () {
@@ -49,9 +50,16 @@ public class AnimateProtein : MonoBehaviour {
 			counter [currPoint] += Time.deltaTime * normMag/(Vector3.Distance(route[currPoint],initials[currPoint])*2.0f);
 			randRotate();
 		} else {
-			if(currPoint < bounces - 1)
-			currPoint++;
-		}
+            if (currPoint < bounces - 1)
+            {
+                currPoint++;
+                defaultScale = key.localScale;
+            }
+            else {
+                key.SetParent(host);
+                key.localScale = key.localScale;
+            }
+        }
     }
 
 	private void randRotate(){
@@ -93,12 +101,11 @@ public class AnimateProtein : MonoBehaviour {
 	}*/
 
 	private void initializeAnimation () {
-		Debug.Log("Animation initialized.");
-		key = transform.GetChild(0);
-		host = transform.GetChild(1);
-		
-		KEYINITPOS = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 4.0f, Screen.height / 2.0f, 500));
-		HOSTINITPOS = Camera.main.ScreenToWorldPoint(new Vector3(3.0f * Screen.width / 4.0f, 3.0f * Screen.height / 4.0f, 400));
+        key = transform.GetChild(0);
+        host = transform.GetChild(1);
+        Debug.Log("Animation initialized.");
+		KEYINITPOS = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 5.0f, Screen.height / 2.0f, 200));
+		HOSTINITPOS = Camera.main.ScreenToWorldPoint(new Vector3(3.0f * Screen.width / 4.0f, 3.0f * Screen.height / 4.0f, 300));
 		key.transform.position = KEYINITPOS;
 		host.transform.position = HOSTINITPOS;
 		
@@ -119,10 +126,20 @@ public class AnimateProtein : MonoBehaviour {
 
     public void setActiveFalse() {
         animeActive = false;
+        if (key == null)
+        {
+            key = transform.FindChild("key");
+            host = transform.FindChild("host");
+            defaultScale = key.localScale;
+        }
+        key.SetParent(transform);
+        key.SetAsFirstSibling();
+        
+        key.transform.localScale = defaultScale;
     }
-	
-	public void setActive () {
-		bounces = Random.Range (3, 7);
+
+    public void setActive () {
+        bounces = Random.Range (3, 7);
 		animeActive = true;
         animationInitialized = false;
 		counter = new float[bounces];
